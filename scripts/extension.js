@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = document.getElementById('enable');
     button.addEventListener('click', function () {
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://raw.githubusercontent.com/morgompx/smartfireJS/master/smartfire.js');
+        request.open('GET', 'https://raw.githubusercontent.com/morgompx/smartfireJS/master/build/smartfire.js');
         request.responseType = 'text';
 
         request.onload = function() {
