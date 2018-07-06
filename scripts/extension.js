@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         request.onload = function() {
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-                chrome.tabs.sendMessage(tabs[0].id, {data: request.response}, function(response) {
+                chrome.tabs.sendMessage(tabs[0].id, {data: requireRequest.response + ' ' + request.response}, function(response) {
                     document.getElementById('enable').innerText = 'Enabled';
                     document.getElementById('enable').setAttribute('disabled', 'disabled');
                     document.getElementById('enable').classList.remove('btn-primary');
